@@ -2,6 +2,7 @@ import React from 'react';
 import { DragDropContext } from 'react-beautiful-dnd';
 import { useCallback } from 'react';
 import Head from './Components/head/Head';
+import Hanger from './Components/hanger/Hanger';
 
 
 function App() {
@@ -31,7 +32,9 @@ function App() {
       onDragEnd={onDragEnd}
     >
       <div>Hello world</div>
-      <Head/>
+      <Hanger>
+        <Head/>
+      </Hanger>
     </DragDropContext>
   );
 }
