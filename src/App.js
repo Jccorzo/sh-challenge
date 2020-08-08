@@ -5,6 +5,7 @@ import Head from './Components/head/Head';
 import Hanger from './Components/hanger/Hanger';
 import Torso from './Components/torso/Torso';
 import InstructionBox from './Components/instrucion-box/InstructionBox';
+import Chest from './Components/chest/Chest';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
       <Hanger>
         <InstructionBox/>
         <Torso/>
+        <Chest/>
         <Head/>
       </Hanger>
     </DragDropContext>
