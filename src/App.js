@@ -4,6 +4,7 @@ import { useCallback } from 'react';
 import Head from './Components/head/Head';
 import Hanger from './Components/hanger/Hanger';
 import Torso from './Components/torso/Torso';
+import InstructionBox from './Components/instrucion-box/InstructionBox';
 
 
 function App() {
@@ -32,8 +33,8 @@ function App() {
       onDragUpdate={onDragUpdate}
       onDragEnd={onDragEnd}
     >
-      <div>Hello world</div>
       <Hanger>
+        <InstructionBox/>
         <Torso/>
         <Head/>
       </Hanger>
