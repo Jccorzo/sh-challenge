@@ -1,25 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { DragDropContext } from 'react-beautiful-dnd';
+import { useCallback } from 'react';
+import Head from './Components/head/Head';
+
 
 function App() {
+  // using useCallback is optional
+  const onBeforeCapture = useCallback(() => {
+    /*...*/
+  }, []);
+  const onBeforeDragStart = useCallback(() => {
+    /*...*/
+  }, []);
+  const onDragStart = useCallback(() => {
+    /*...*/
+  }, []);
+  const onDragUpdate = useCallback(() => {
+    /*...*/
+  }, []);
+  const onDragEnd = useCallback(() => {
+    // the only one that is required
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <DragDropContext
+      onBeforeCapture={onBeforeCapture}
+      onBeforeDragStart={onBeforeDragStart}
+      onDragStart={onDragStart}
+      onDragUpdate={onDragUpdate}
+      onDragEnd={onDragEnd}
+    >
+      <div>Hello world</div>
+      <Head/>
+    </DragDropContext>
   );
 }
 
